@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@sveltejs/adapter-vercel': ^1.0.0-next.29
   '@sveltejs/kit': next
   nanoid: ^3.1.28
   prettier: ^2.4.1
@@ -13,6 +14,7 @@ dependencies:
   nanoid: 3.1.28
 
 devDependencies:
+  '@sveltejs/adapter-vercel': 1.0.0-next.29
   '@sveltejs/kit': 1.0.0-next.175_svelte@3.43.0
   prettier: 2.4.1
   prettier-plugin-svelte: 2.4.0_prettier@2.4.1+svelte@3.43.0
@@ -28,6 +30,12 @@ packages:
     dependencies:
       estree-walker: 2.0.2
       picomatch: 2.3.0
+    dev: true
+
+  /@sveltejs/adapter-vercel/1.0.0-next.29:
+    resolution: {integrity: sha512-2DMz4qCm5+v+/8npdbyT/uQVMr3elSOH5ZJ24k3VLug60n6/sS4RyU++RO8gjiVQqxyGvdfRFJXAX6xV4K6hzg==}
+    dependencies:
+      esbuild: 0.12.29
     dev: true
 
   /@sveltejs/kit/1.0.0-next.175_svelte@3.43.0:
