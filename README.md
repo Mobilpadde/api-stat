@@ -1,38 +1,9 @@
-# create-svelte
+# API-stat
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+I could not keep my eyes of off [readme.com](https://readme.com/metrics)'s beautiful API-metrics - so I did what any other (in)sane person would do, and re-created it with [svelte](https://kit.svelte.dev/)!
 
-## Creating a project
+## Caveats
 
-If you're seeing this, you've probably already done this step. Congrats!
+As for now, it's simply using a `setTimeout` to tell when a `request` has finished. Though, in the future, I'd love to use web-sockets - moreover actually listen for when a request has finished.
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
-```
-
-> Note: the `@next` is temporary
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+This might not be possible on vercel alone, but could be if I decide to couple on a datastore - e.g. redis?
