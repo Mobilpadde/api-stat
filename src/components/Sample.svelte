@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
-	import { nanoid } from 'nanoid';
+	import { generateId } from 'zoo-ids';
 
 	const colors = {
 		201: 'green',
@@ -11,7 +11,14 @@
 		504: 'red'
 	};
 	const methods = ['GET', 'POST', 'DELETE', 'PATCH', 'PUT'];
-	const paths = ['/user/{username}', '/jwt/refresh', '/api/orders', '/embed'];
+	const paths = new Array(6).fill('/stats/api').map(
+		(x) =>
+			`${x}/${generateId(null, {
+				caseStyle: 'lowercase',
+				numAdjectives: 3,
+				delimiter: '-'
+			})}`
+	);
 
 	const generate = () => {
 		let keys = Object.keys(colors);
@@ -29,7 +36,11 @@
 		n = ~~(Math.random() * n);
 		const path = paths[n];
 
-		const id = nanoid();
+		const id = generateId(null, {
+			caseStyle: 'lowercase',
+			delimiter: '-'
+		});
+
 		return {
 			id,
 			color,

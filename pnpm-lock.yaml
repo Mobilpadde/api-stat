@@ -4,17 +4,17 @@ specifiers:
   '@sveltejs/adapter-vercel': ^1.0.0-next.29
   '@sveltejs/kit': next
   axios: ^0.21.4
-  nanoid: ^3.1.28
   prettier: ^2.4.1
   prettier-plugin-svelte: ^2.4.0
   prettier-plugin-tailwind: ^2.2.12
   svelte: ^3.42.6
   svelte-windicss-preprocess: ^4.0.12
   typescript: ^4.4.3
+  zoo-ids: ^2.0.6
 
 dependencies:
   axios: 0.21.4
-  nanoid: 3.1.28
+  zoo-ids: 2.0.6
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.29
@@ -194,6 +194,7 @@ packages:
     resolution: {integrity: sha512-gSu9VZ2HtmoKYe/lmyPFES5nknFrHa+/DT9muUFWFMi6Jh9E1I7bkvlQ8xxf1Kos9pi9o8lBnIOkatMhKX/YUw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+    dev: true
 
   /p-limit/3.1.0:
     resolution: {integrity: sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ==}
@@ -372,3 +373,7 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /zoo-ids/2.0.6:
+    resolution: {integrity: sha512-6unO0JU51+h93q2YYDRVuq3sxMT6HM7hOmGEyKMSoKjTJcFwyuvhyhXWywkyZbY5gB0kO6YcKkAwiL1izIpTsA==}
+    dev: false

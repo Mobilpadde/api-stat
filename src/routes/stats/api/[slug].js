@@ -1,7 +1,11 @@
-import { nanoid } from 'nanoid';
+import { generateId } from 'zoo-ids';
 
 const fn = (method, path, code) => {
-	const id = nanoid(42);
+	const id = generateId(null, {
+		caseStyle: 'lowercase',
+		numAdjectives: 3,
+		delimiter: '-'
+	});
 	const colors = {
 		201: 'green',
 		302: 'yellow',
