@@ -1,7 +1,7 @@
 <script>
-	import Sample from '../components/sample.svelte';
+	import Sample from '../components/Sample.svelte';
 </script>
 
-<div class="max-w-screen-lg mx-auto my-8 min-h-96 h-full">
+<div class="my-8">
 	<Sample />
 </div>

@@ -1,13 +1,14 @@
 <script>
 	import { onMount } from 'svelte';
-	import { fly, fade } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
 	import { nanoid } from 'nanoid';
 
 	const colors = {
-		200: 'green',
+		201: 'green',
 		302: 'yellow',
-		503: 'red'
+		403: 'red',
+		504: 'red'
 	};
 	const methods = ['GET', 'POST', 'DELETE', 'PATCH', 'PUT'];
 	const paths = ['/user/{username}', '/jwt/refresh', '/api/orders', '/embed'];
@@ -58,9 +59,9 @@
 	onMount(generateProcess);
 </script>
 
-<div class="bg-gray-50 filter drop-shadow w-full h-full rounded-lg overflow-hidden">
+<div class="w-full overflow-hidden rounded-lg bg-gray-50 filter drop-shadow max-h-100">
 	<ul>
-		<li class="flex flex-row font-bold text-lg py-4 border-b bg-gray-100 border-gray-200 shadow-sm">
+		<li class="flex flex-row py-4 text-lg font-bold bg-gray-100 border-b border-gray-200 shadow-sm">
 			<span class="block w-2/10" />
 			<span class="block w-2/10">Code</span>
 			<span class="block w-2/10">Method</span>
@@ -72,7 +73,7 @@
 				in:fade={{ key: msg.id, duration: 750 }}
 				out:fade={{ key: msg.id, duration: 250 }}
 				animate:flip>
-				<span class="block w-2/10 text-center">
+				<span class="block text-center w-2/10">
 					<span
 						class="inline-block w-3 h-3 rounded-full {msg.loading ? 'bg-gray-500' : `${msg.color === 'green' && 'bg-green-500'}
 						${msg.color === 'yellow' && 'bg-yellow-500'}
